@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+/
+	Design by Free CSS Templates
+	http://www.freecsstemplates.org
+	Released for free under a Creative Commons Attribution 2.5 License
+
+	Name       : Implied
+	Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+	Version    : 1.0
+	Released   : 20090716
+
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+	%head
+		%meta{ 'content-type' => "text/html", :charset => "utf-8"}
+		%title
+			Implied by Free CSS Templates
+		%meta{ :name => "keywords", :content => "" }
+		%meta{ :name => "description", :content => "" }
+		%link{ :href => "/static/wBlog/style.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
+	%body
+		#wrapper
+			#header-wrapper
+				#header
+					#logo
+						%h1
+							<a href="#">implied</a>
+						%h2
+							by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> + <a href="http://www.freecsstemplates.org/">fct</a>
+					#menu
+						%ul
+							%li.first
+								<a href="#">Home</a>
+							%li
+								<a href="#">Services</a>
+							%li
+								<a href="#">Portfolio</a>
+							%li
+								<a href="#">About</a>
+							%li
+								<a href="#">Contact</a>
+			#page
+				#content
+					%div
+						<a href="#"><img src="/static/wBlog/images/img10.jpg" alt="" id="banner" /></a>
+					= yield
+				#sidebar
+					%ul
+						%li#search
+							%form{:method => "get",  :action => ""}
+								%fieldset
+									<input type="text" id="search-text" name="s" value="" />
+									<input type="submit" id="search-submit" value="" />
+						%li
+							%h2
+								volutpat consequatt 
+							%ul
+								%li
+									<a href="#">Sed accumsan congue</a>
+								%li
+									<a href="#"> Nulla dignissim nec augue</a>
+								%li
+									<a href="#">Nunc ante elit nulla</a>
+								%li
+									<a href="#">Aliquam suscipit consequat</a>
+								%li
+									<a href="#">Cursus sed arcu sed</a>
+								%li
+									<a href="#">Nulla dignissim nec augue<br /></a>
+						%li
+							%h2
+								sed etiam dolore
+							%ul
+								%li
+									<a href="#">Sed accumsan congue</a>
+								%li
+									<a href="#"> Nulla dignissim nec augue</a>
+								%li
+									<a href="#">Cursus sed arcu sed<br /></a>
+				<div style="clear: both;">&nbsp;</div>
+
+		#footer
+			%p
+				(c) 2009 Sitename.com. Design by <a href="http://www.nodethirtythree.com/">nodethirtythree</a> + <a href="http://www.freecsstemplates.org">free css templates</a>
+

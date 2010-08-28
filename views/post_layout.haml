@@ -1,13 +1,16 @@
 .post
-	.posttitle
-		%h4
-			= post.title
-		%h5
-			== par #{post.get_author} le #{print_date(post.date)}
-	.postcontent
-		= post.print_content
+	%h2.title
+		= post.title
+	%p.date
+		= print_date(post.date)
+	.entry
+		.entry-btm
+			%p
+				= post.print_content
+	.meta
+		%p.links
+			<a href="/#{post.id}" class="comments">Comments ()</a> &nbsp;&nbsp;&nbsp; <a href="/#{post.urltext}" class="permalink">Full article</a>
 
 - if show_comments
 	- post.comments.each do |comment|
 		= haml :comment_layout, :layout => false, :locals => { :comment => comment }
-
