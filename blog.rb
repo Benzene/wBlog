@@ -12,10 +12,14 @@ class Blog < Sinatra::Application
 		haml :blog_layout, :locals => { :posts => posts }
 	end
 
-	get "#{$app_root}/:id" do
+	get "#{$app_root}/n/:id" do
 		post = Post.get(params[:id])
 		haml :post_layout, :locals => { :post => post, :show_comments => true }
 	end
-
+	
+	get "#{$app_root}/:title" do
+		post = Post.first( :urltext => params[:title])
+		haml :post_layout, :locals => { :post => post, :show_comments => true }
+	end
 end
 
