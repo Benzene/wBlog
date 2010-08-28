@@ -19,11 +19,6 @@ class Post
 		author_id
 	end
 
-	# Format content *before* inserting it into database (interpreting bbcode, etc)
-	def format_content
-		content
-	end
-	
 	# Runtime content formatting
 	def print_content
 		content
@@ -32,6 +27,20 @@ class Post
 	# Search functions
 	def self.get_first_10
 		all(:type => 'post', :order => [:date.desc], :limit => 10)
+	end
+	
+	def self.newpost(uid, title, content)
+		p = Post.new( :date => Time.now, 
+			:author_id => uid, 
+			:title => title, 
+			:urltext => title.downcase.gsub(/[^[:alnum:]]/,'*'),
+			:content => format_content(content),
+			:type => 'post')
+		begin
+			p.save
+		rescue
+			puts "Save failed. Illegal blog contents"
+		end
 	end
 end
 
