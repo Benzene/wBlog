@@ -1,0 +1,13 @@
+.post
+	.posttitle
+		%h4
+			= post.title
+		%h5
+			== par #{post.get_author} le #{print_date(post.date)}
+	.postcontent
+		= post.print_content
+
+- if show_comments
+	- post.comments.each do |comment|
+		= haml :comment_layout, :layout => false, :locals => { :comment => comment }
+

@@ -1,0 +1,4 @@
+.blog_contents
+	- posts.each do |post|
+		= haml :post_layout, :layout => false, :locals => { :post => @post, :show_comments => false}
+
