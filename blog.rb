@@ -11,7 +11,7 @@ class Blog < Sinatra::Application
 	end
 
 	get '/:id' do
-		post = Post.get(10)
+		post = Post.get(params[:id])
 		haml :post_layout, :locals => { :post => post, :show_comments => true }
 	end
 
