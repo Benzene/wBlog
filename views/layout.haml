@@ -13,7 +13,7 @@
 	%head
 		%meta{ 'content-type' => "text/html", :charset => "utf-8"}
 		%title
-			Implied by Free CSS Templates
+			Russian girls and zfs. (Marchroutka style)
 		%meta{ :name => "keywords", :content => "" }
 		%meta{ :name => "description", :content => "" }
 		%link{ :href => "/static/wBlog/style.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
@@ -23,25 +23,25 @@
 				#header
 					#logo
 						%h1
-							<a href="#">implied</a>
+							= mk_abs_link("", "Russian girls and zfs")
 						%h2
-							by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> + <a href="http://www.freecsstemplates.org/">fct</a>
+							by Benzene
 					#menu
 						%ul
 							%li.first
-								<a href="#">Home</a>
+								= mk_abs_link("","Home")
 							%li
-								<a href="#">Services</a>
+								= mk_abs_link("blog/", "Blog")
 							%li
-								<a href="#">Portfolio</a>
+								= mk_abs_link("#", "Portfolio")
 							%li
-								<a href="#">About</a>
+								= mk_abs_link("#", "About")
 							%li
-								<a href="#">Contact</a>
+								= mk_abs_link("#", "Contact")
 			#page
 				#content
 					%div
-						<a href="#"><img src="/static/wBlog/images/img10.jpg" alt="" id="banner" /></a>
+						= mk_abs_link("#","<img src=\"/static/wBlog/images/img10.jpg\" alt=\"\" id=\"banner\" />")
 					= yield
 				#sidebar
 					%ul
@@ -52,33 +52,33 @@
 									<input type="submit" id="search-submit" value="" />
 						%li
 							%h2
-								volutpat consequatt 
+								Menu 
 							%ul
 								%li
-									<a href="#">Sed accumsan congue</a>
+									= mk_link("#", "There")
 								%li
-									<a href="#"> Nulla dignissim nec augue</a>
+									= mk_link("#", "Should")
 								%li
-									<a href="#">Nunc ante elit nulla</a>
+									= mk_link("#", "Be")
 								%li
-									<a href="#">Aliquam suscipit consequat</a>
+									= mk_link("#","A")
 								%li
-									<a href="#">Cursus sed arcu sed</a>
+									= mk_link("#","Menu")
 								%li
-									<a href="#">Nulla dignissim nec augue<br /></a>
+									= mk_link("#","Here<br />")
 						%li
 							%h2
-								sed etiam dolore
+								Follow me on :
 							%ul
 								%li
-									<a href="#">Sed accumsan congue</a>
+									%a{ :href => "https://twitter.com/octobenzene" }
+										Twitter
 								%li
-									<a href="#"> Nulla dignissim nec augue</a>
-								%li
-									<a href="#">Cursus sed arcu sed<br /></a>
+									%a{ :href => "http://github.com/Benzene" }
+										Github
 				<div style="clear: both;">&nbsp;</div>
 
 		#footer
 			%p
-				(c) 2009 Sitename.com. Design by <a href="http://www.nodethirtythree.com/">nodethirtythree</a> + <a href="http://www.freecsstemplates.org">free css templates</a>
+				(c) 2010 leukensis.org. Design by <a href = "http://www.nodethirtythree.com/">nodethirtythree</a> + <a href = "http://www.freecsstemplates.org">free css templates</a>
 

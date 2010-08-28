@@ -9,7 +9,9 @@
 				= post.print_content
 	.meta
 		%p.links
-			<a href="/#{post.id}" class="comments">Comments ()</a> &nbsp;&nbsp;&nbsp; <a href="/#{post.urltext}" class="permalink">Full article</a>
+			= mk_link("#{post.id}","Comments ()", "comments")
+			= "&nbsp;&nbsp;&nbsp;"
+			= mk_link("#{post.urltext}","Full article", "permalink")
 
 - if show_comments
 	- post.comments.each do |comment|
