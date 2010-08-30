@@ -4,7 +4,7 @@ require_relative '../globauth/Globauth-rack'
 
 use Rack::Lint
 use Rack::ShowExceptions
-use Rack::CommonLogger
+#use Rack::CommonLogger
 use Rack::ContentLength
 
 use Rack::Session::Pool, :domain => '82.146.49.253', :expire_after => 60 * 60 * 24 * 30, :secure => true
