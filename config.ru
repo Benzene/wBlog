@@ -16,5 +16,7 @@ disable :run, :reload
 
 require_relative 'blog'
 
-run Blog
+map $app_root do
+  run Blog
+end
 
