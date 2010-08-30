@@ -5,9 +5,9 @@ require_relative 'lib/config'
 require_relative 'lib/db-config'
 require_relative 'lib/links'
 
-set :root, File.dirname(__FILE__)
-
 class Blog < Sinatra::Application 
+
+	set :root, File.dirname(__FILE__)
 
 	get "/" do
 		posts = Post.get_first_10
