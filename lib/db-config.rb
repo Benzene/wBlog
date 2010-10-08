@@ -3,7 +3,7 @@ require 'dm-validations'
 
 require_relative 'commons'
 
-DataMapper.setup( :default, "sqlite3:///home/wilya/wBlog/blog.db" )
+DataMapper.setup( :default, "sqlite3:///home/www/dbs/blog.db" )
 
 require_relative '../models/post'
 require_relative '../models/comment'
