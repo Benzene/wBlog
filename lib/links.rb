@@ -1,8 +1,8 @@
 def mk_link(url, txt, htmlclass='')
 	if htmlclass == '' then
-		"<a href=\"#{$app_root}/#{url}\">#{txt}</a>"
+		"<a href=\"#{$blog_root}/#{url}\">#{txt}</a>"
 	else
-		"<a href=\"#{$app_root}/#{url}\" class=\"#{htmlclass}\">#{txt}</a>"
+		"<a href=\"#{$blog_root}/#{url}\" class=\"#{htmlclass}\">#{txt}</a>"
 	end
 end
 

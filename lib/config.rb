@@ -1,1 +1,1 @@
-$app_root = '/blog'
+$blog_root = '/blog'
