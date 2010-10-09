@@ -6,7 +6,8 @@
 	.entry
 		.entry-btm
 			%p
-				= post.print_content
+				:markdown
+					#{post.print_content}
 	.meta
 		%p.links
 			= mk_link("n/#{post.id}","Comments ()", "comments")

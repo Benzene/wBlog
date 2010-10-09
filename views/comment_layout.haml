@@ -1,5 +1,6 @@
 .comment
 		%h6.commenttitle #{comment.get_author} a écrit, le #{print_date(comment.date)}
 		.commentcontent
-			= comment.print_content
+			:markdown
+				#{comment.print_content}
 
