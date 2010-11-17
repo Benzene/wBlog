@@ -1,3 +1,4 @@
+#encoding: UTF-8
 # Formats a DateTime object for printing
 def print_date(date)
 	date

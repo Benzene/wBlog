@@ -1,3 +1,5 @@
+#encoding: UTF-8
+
 def mk_link(url, txt, htmlclass='')
 	if htmlclass == '' then
 		"<a href=\"#{$blog_root}/#{url}\">#{txt}</a>"

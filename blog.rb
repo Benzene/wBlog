@@ -1,3 +1,5 @@
+#encoding: UTF-8
+
 require 'sinatra'
 require 'haml'
 
@@ -35,9 +37,8 @@ class Blog < Sinatra::Application
 
 	post "/add" do
 		if @isadmin then
-			puts @env['rack.session']['uid']
-			puts params['title']
-			puts params['content']
+			params['title'].force_encoding("UTF-8")
+			params['content'].force_encoding("UTF-8")
 			Post.newpost(@env['rack.session']['uid'],params['title'],params['content'])	
 		end
 		redirect '/blog/'
