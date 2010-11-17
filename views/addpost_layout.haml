@@ -1,8 +1,9 @@
-<form method="post" action="">
-<input type="text" id="login-text-user" value="Title" name="title"/>
-<br />
-<textarea cols="80" rows="10" name="content"></textarea>
-<br />
-<input type="submit" id="login-submit" value=""/>
-</form>
+%form{ :method => "post", :action => ""}
+  %input#login-text-user{ :type => "text", :value => @edit == true ? post.title : "Title", :name => "title"}/
+  %br/
+  %textarea{ :cols => "80", :rows => "10", :name => "content"}
+    - if @edit == true then
+      = post.content
+  %br/
+  %input.login-submit{ :type => "submit", :value => ""}/
 

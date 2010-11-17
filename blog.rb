@@ -27,7 +27,8 @@ class Blog < Sinatra::Application
 		if !@isadmin then
 			redirect '/blog/'
 		else
-			haml :addpost_layout
+			@edit = false
+			haml :addpost_layout, :locals => { :post => nil, :edit => false }
 		end
 	
 	end
@@ -45,6 +46,26 @@ class Blog < Sinatra::Application
 	get "/del/:id" do
 		if @isadmin then
 			Post.get(params[:id]).destroy
+		end
+		redirect '/blog/'
+	end
+
+	get "/edit/:id" do
+		if !@isadmin then
+			redirect '/blog/'
+		else
+			@post = Post.get(params[:id])
+			@edit = true
+			haml :addpost_layout, :locals => { :post => @post, :edit => true }
+		end
+	end
+
+	post "/edit/:id" do
+		if @isadmin then
+			post = Post.get(params[:id])
+			post.title=params['title']
+			post.content=params['content']
+			post.save
 		end
 		redirect '/blog/'
 	end
